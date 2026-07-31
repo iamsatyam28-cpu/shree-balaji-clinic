@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Balaji Clinic | Medical Clinic in Gunjur Palya</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #e6f0fa;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --star-color: #ffc107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 150px 2rem 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        /* Rating Badge */
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stars {
+            color: var(--star-color);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        /* Overview & Details */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Reviews Section */
+        .reviews-bg {
+            background-color: var(--secondary-color);
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--secondary-color);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can be toggled via JS */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">SHRI BALAJI CLINIC</a>
+            <nav class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Location & Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="rating-badge">
+            <span>5.0</span>
+            <span class="stars">★★★★★</span>
+            <span>(12 Google Reviews)</span>
+        </div>
+        <h1>Shri Balaji Clinic</h1>
+        <p>Premium Medical Care in Gunjur Palya, Bengaluru. Dedicated to listening patiently and prescribing accurate treatments for your health needs.</p>
+        <div>
+            <a href="tel:09980857450" class="btn">Call: 099808 57450</a>
+            <a href="https://maps.google.com/?q=Shri+Balaji+Clinic+Gunjur+Palya+Bengaluru" target="_blank" class="btn btn-outline">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <h2 class="section-title">Clinic Information</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>About Us</h3>
+                <p><strong>Medical Clinic</strong></p>
+                <p style="margin-top: 1rem;">Managed by highly rated medical professionals. <em>[Doctor/Owner Name Placeholder]</em> focuses on minute details to provide the best treatment and care for every patient.</p>
+            </div>
+            <div class="info-card">
+                <h3>Working Hours</h3>
+                <p><strong>Morning:</strong> Open until 1:00 PM</p>
+                <p><strong>Evening:</strong> Reopens at 5:00 PM</p>
+                <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">(Please call ahead to confirm daily availability)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section reviews-bg">
+        <div class="section" style="padding: 0;">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <p class="review-text">"Excellent Doctor, listened to minute details."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">"He listens so patiently and prescribe as required."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">"Very good doctor and best treatment lass change"</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Contact Details</h3>
+                <p><strong>Phone:</strong> <a href="tel:09980857450" style="color: var(--primary-color); text-decoration: none;">099808 57450</a></p>
+                <br>
+                <p><strong>Address:</strong></p>
+                <p>Gunjur Palya,</p>
+                <p>Bengaluru, Karnataka 560087</p>
+                <br>
+                <p><strong>Plus Code:</strong> WPCC+FP Bengaluru, Karnataka</p>
+            </div>
+            
+            <!-- Map Placeholder Area -->
+            <div class="info-card" style="padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #e0e0e0;">
+                <!-- Replace the src below with an actual Google Maps embed iframe for your specific location if needed -->
+                <div style="padding: 2rem; text-align: center;">
+                    <h3 style="color: #666;">Interactive Map</h3>
+                    <p><a href="https://maps.google.com/?q=Shri+Balaji+Clinic+Gunjur+Palya+Bengaluru" target="_blank" class="btn" style="background: var(--primary-color); color: white;">Open in Google Maps</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Shri Balaji Clinic. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Gunjur Palya, Bengaluru, Karnataka 560087</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Adding a simple scroll effect to the navigation bar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
