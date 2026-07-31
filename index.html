@@ -3,332 +3,504 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Balaji Clinic | Medical Clinic in Gunjur Palya</title>
+    <title>Shri Balaji Clinic | Premium Medical Care in Gunjur Palya</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS Reset & Variables */
+        /* --- CSS Variables & Reset --- */
         :root {
-            --primary-color: #0056b3;
-            --secondary-color: #e6f0fa;
-            --text-dark: #333333;
-            --text-light: #666666;
+            --primary: #0066cc; /* Deep medical blue */
+            --secondary: #00b3b3; /* Teal accent */
+            --bg-light: #f4f7f6;
+            --text-dark: #2c3e50;
+            --text-gray: #7f8c8d;
             --white: #ffffff;
-            --star-color: #ffc107;
+            --transition: all 0.3s ease-in-out;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
             color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-
-        /* Navigation */
-        header {
             background-color: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
+        /* --- Top Bar --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        .top-bar-contact i { margin-right: 5px; color: var(--secondary); }
+        .top-bar a { color: var(--white); text-decoration: none; margin-right: 15px;}
+
+        /* --- Navbar --- */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i { color: var(--secondary); font-size: 2rem; }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
 
         .nav-links a {
-            margin-left: 2rem;
             text-decoration: none;
             color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            transition: var(--transition);
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
+        .nav-links a:hover { color: var(--secondary); }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        .btn-primary {
+            background-color: var(--secondary);
             color: var(--white);
-            padding: 150px 2rem 100px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--white);
-            color: var(--primary-color);
-            padding: 12px 24px;
-            border-radius: 5px;
+            padding: 10px 25px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            margin: 0.5rem;
-            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 179, 179, 0.3);
         }
 
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
+        .btn-primary:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
         }
 
-        .btn:hover {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-        }
-
-        /* Rating Badge */
-        .rating-badge {
-            display: inline-flex;
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 102, 204, 0.85), rgba(0, 102, 204, 0.85)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 80vh;
+            display: flex;
             align-items: center;
-            background: rgba(255,255,255,0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .stars {
-            color: var(--star-color);
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        /* Sections */
-        .section {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-        }
-
-        /* Overview & Details */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .info-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Reviews Section */
-        .reviews-bg {
-            background-color: var(--secondary-color);
-        }
-
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .review-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
-        .review-card::before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--secondary-color);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-family: serif;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-dark);
+            padding: 0 5%;
             color: var(--white);
-            text-align: center;
-            padding: 2rem;
         }
 
-        /* Mobile Responsive */
+        .hero-content {
+            max-width: 600px;
+            animation: slideInLeft 1s ease-out forwards;
+        }
+
+        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+        /* --- Interactive Stats Counters --- */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background: var(--white);
+            padding: 40px 5%;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+            margin-top: -30px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .stat-box { text-align: center; }
+        .stat-box i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--primary); }
+        .stat-text { color: var(--text-gray); font-weight: 500; }
+
+        /* --- Services Grid --- */
+        .section { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary); }
+        .section-title p { color: var(--secondary); font-weight: bold; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: var(--white);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon { background: var(--secondary); color: var(--white); }
+
+        /* --- Reviews/Testimonials --- */
+        .reviews-section { background-color: var(--primary); color: var(--white); }
+        .reviews-section .section-title h2 { color: var(--white); }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .review-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        .stars { color: #ffc107; margin-bottom: 15px; }
+
+        /* --- Floating Widgets --- */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+
+        /* --- Interactive Modal (Pop-up) --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .modal-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            transform: translateY(-50px);
+            transition: var(--transition);
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-gray);
+        }
+        
+        .form-group { margin-bottom: 15px; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        /* --- Footer --- */
+        footer { background: #1a252f; color: #fff; padding: 50px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;}
+        .footer-grid h4 { color: var(--secondary); margin-bottom: 20px; }
+        .footer-links a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--secondary); padding-left: 5px;}
+
+        /* --- Animations --- */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Can be toggled via JS */
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .stats-container { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">SHRI BALAJI CLINIC</a>
-            <nav class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#contact">Location & Contact</a>
-            </nav>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-contact">
+            <a href="tel:09980857450"><i class="fas fa-phone-alt"></i> 099808 57450</a>
+            <span><i class="fas fa-envelope"></i> contact@shribalajiclinic.in</span>
         </div>
+        <div class="top-bar-timing">
+            <span><i class="fas fa-clock"></i> 8:00 AM - 1:00 PM | 5:00 PM - 9:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i> Shri Balaji Clinic</a>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#reviews">Reviews</a>
+            <button class="btn-primary" onclick="toggleModal()">Book Appointment</button>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="rating-badge">
-            <span>5.0</span>
-            <span class="stars">★★★★★</span>
-            <span>(12 Google Reviews)</span>
-        </div>
-        <h1>Shri Balaji Clinic</h1>
-        <p>Premium Medical Care in Gunjur Palya, Bengaluru. Dedicated to listening patiently and prescribing accurate treatments for your health needs.</p>
-        <div>
-            <a href="tel:09980857450" class="btn">Call: 099808 57450</a>
-            <a href="https://maps.google.com/?q=Shri+Balaji+Clinic+Gunjur+Palya+Bengaluru" target="_blank" class="btn btn-outline">Get Directions</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Healthcare at Your Fingertips</h1>
+            <p>Experience advanced, patient-friendly medical care at Shri Balaji Clinic. We combine expert knowledge with a compassionate approach to restore and protect your health.</p>
+            <button class="btn-primary" style="font-size: 1.1rem; padding: 15px 35px;" onclick="toggleModal()">Book Your Consultation</button>
         </div>
     </section>
 
-    <!-- Overview Section -->
-    <section id="overview" class="section">
-        <h2 class="section-title">Clinic Information</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>About Us</h3>
-                <p><strong>Medical Clinic</strong></p>
-                <p style="margin-top: 1rem;">Managed by highly rated medical professionals. <em>[Doctor/Owner Name Placeholder]</em> focuses on minute details to provide the best treatment and care for every patient.</p>
+    <!-- Interactive Stats -->
+    <div class="stats-container">
+        <div class="stat-box">
+            <i class="fas fa-user-md"></i>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-text">Years of Experience</div>
+        </div>
+        <div class="stat-box">
+            <i class="fas fa-smile"></i>
+            <div class="stat-number" data-target="10000">0</div>
+            <div class="stat-text">Happy Patients</div>
+        </div>
+        <div class="stat-box">
+            <i class="fas fa-star"></i>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-text">Google Rating</div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="section-title">
+            <p>WHAT WE DO</p>
+            <h2>Our Medical Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                <h3>General Consultation</h3>
+                <p>Comprehensive health check-ups, early detection, and accurate diagnosis for all age groups.</p>
             </div>
-            <div class="info-card">
-                <h3>Working Hours</h3>
-                <p><strong>Morning:</strong> Open until 1:00 PM</p>
-                <p><strong>Evening:</strong> Reopens at 5:00 PM</p>
-                <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">(Please call ahead to confirm daily availability)</p>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-pills"></i></div>
+                <h3>Chronic Care</h3>
+                <p>Expert monitoring and management of chronic conditions like diabetes, hypertension, and asthma.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-child"></i></div>
+                <h3>Pediatric Care</h3>
+                <p>Child-focused healthcare ensuring healthy development and swift recovery from illnesses.</p>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="section reviews-bg">
-        <div class="section" style="padding: 0;">
-            <h2 class="section-title">What Our Patients Say</h2>
-            <div class="review-grid">
-                <div class="review-card">
-                    <p class="review-text">"Excellent Doctor, listened to minute details."</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="review-card">
-                    <p class="review-text">"He listens so patiently and prescribe as required."</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="review-card">
-                    <p class="review-text">"Very good doctor and best treatment lass change"</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-            </div>
+    <section id="reviews" class="section reviews-section">
+        <div class="section-title">
+            <p>TESTIMONIALS</p>
+            <h2>What Our Patients Say</h2>
         </div>
-    </section>
-
-    <!-- Contact & Location Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Visit Us</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>Contact Details</h3>
-                <p><strong>Phone:</strong> <a href="tel:09980857450" style="color: var(--primary-color); text-decoration: none;">099808 57450</a></p>
-                <br>
-                <p><strong>Address:</strong></p>
-                <p>Gunjur Palya,</p>
-                <p>Bengaluru, Karnataka 560087</p>
-                <br>
-                <p><strong>Plus Code:</strong> WPCC+FP Bengaluru, Karnataka</p>
+        <div class="reviews-grid">
+            <div class="review-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Excellent Doctor, listened to minute details. I feel confident and well taken care of."</p>
+                <h4 style="margin-top: 15px;">- Google Reviewer</h4>
             </div>
-            
-            <!-- Map Placeholder Area -->
-            <div class="info-card" style="padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #e0e0e0;">
-                <!-- Replace the src below with an actual Google Maps embed iframe for your specific location if needed -->
-                <div style="padding: 2rem; text-align: center;">
-                    <h3 style="color: #666;">Interactive Map</h3>
-                    <p><a href="https://maps.google.com/?q=Shri+Balaji+Clinic+Gunjur+Palya+Bengaluru" target="_blank" class="btn" style="background: var(--primary-color); color: white;">Open in Google Maps</a></p>
-                </div>
+            <div class="review-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"He listens so patiently and prescribes exactly as required. The care is exceptional."</p>
+                <h4 style="margin-top: 15px;">- Google Reviewer</h4>
+            </div>
+            <div class="review-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Very good doctor and best treatment. Professional and very supportive staff."</p>
+                <h4 style="margin-top: 15px;">- Google Reviewer</h4>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Shri Balaji Clinic. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Gunjur Palya, Bengaluru, Karnataka 560087</p>
+        <div class="footer-grid">
+            <div>
+                <h4><i class="fas fa-heartbeat"></i> Shri Balaji Clinic</h4>
+                <p>Expert medical care in Gunjur Palya, dedicated to your lifelong health.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Our Services</a>
+            </div>
+            <div>
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--secondary);"></i> Gunjur Palya, Bengaluru, Karnataka 560087</p>
+                <p><i class="fas fa-phone" style="color: var(--secondary); margin-top: 10px;"></i> 099808 57450</p>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; font-size: 0.9rem; color: #aaa;">
+            &copy; 2026 Shri Balaji Clinic. All Rights Reserved.
+        </div>
     </footer>
 
-    <!-- Interactive JavaScript -->
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919980857450" target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Appointment Pop-up Modal -->
+    <div class="modal-overlay" id="appointmentModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="toggleModal()">&times;</span>
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Book an Appointment</h2>
+            <form onsubmit="event.preventDefault(); alert('Request sent! The clinic will call you shortly.'); toggleModal();">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number *" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Briefly describe your symptoms/needs" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
     <script>
-        // Adding a simple scroll effect to the navigation bar
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        // 1. Modal Toggle Logic
+        function toggleModal() {
+            const modal = document.getElementById('appointmentModal');
+            modal.classList.toggle('active');
+        }
+
+        // 2. Animated Number Counters
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200; // The lower the slower
+
+        const startCounters = (entry) => {
+            if (entry.isIntersecting) {
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 15);
+                        } else {
+                            counter.innerText = target + (target > 1000 ? '+' : '');
+                        }
+                    };
+                    updateCount();
+                });
+                observer.unobserve(entry.target);
             }
-        });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => startCounters(entry));
+        }, { threshold: 0.5 });
+
+        document.querySelector('.stats-container') && observer.observe(document.querySelector('.stats-container'));
+
+        // 3. Scroll Reveal Animation for Cards
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => revealObserver.observe(reveal));
     </script>
 </body>
 </html>
