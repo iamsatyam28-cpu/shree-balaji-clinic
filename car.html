@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Self Drive Cars | Bangalore</title>
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles to supplement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .star-rating {
+            color: #fbbf24; /* Tailwind yellow-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <i class="fa-solid fa-car-side text-blue-600 text-3xl mr-2"></i>
+                        <span class="font-bold text-xl tracking-tight">VS Self Drive</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Home</a>
+                    <a href="#fleet" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Our Fleet</a>
+                    <a href="#reviews" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Reviews</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Contact</a>
+                    <a href="tel:09494673361" class="bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">Experience the Freedom of the Road</h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Premium self-drive car rentals in Marathahalli, Bangalore. Well-maintained cars, competitive prices, and smooth pickup process.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#fleet" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg">Explore Cars</a>
+                <a href="tel:09494673361" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg border border-blue-600">Call: 094946 73361</a>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="mt-12 flex justify-center space-x-8 md:space-x-16">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white flex items-center justify-center">4.5 <i class="fa-solid fa-star text-yellow-400 text-xl ml-1"></i></div>
+                    <div class="text-sm text-gray-300">Google Rating</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">24/7</div>
+                    <div class="text-sm text-gray-300">Support</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">5 min</div>
+                    <div class="text-sm text-gray-300">Pickup Process</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Why Choose VS Self Drive?</h2>
+                <p class="mt-4 text-gray-600">We offer a seamless and transparent car rental experience in Bengaluru.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-wallet text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Budget Friendly</h3>
+                    <p class="text-gray-600">Get highly competitive prices without hidden fees. We believe in reasonable pricing for good experiences.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-stopwatch text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Smooth Pickup</h3>
+                    <p class="text-gray-600">Our pickup process is incredibly fast. Most customers are on the road within a 5-7 minute wait.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-headset text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Excellent Support</h3>
+                    <p class="text-gray-600">Friendly owner and responsive support. We lift calls immediately even when you are out on your trip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Our Popular Cars</h2>
+                <p class="mt-4 text-gray-600">Well-maintained hatchbacks, sedans, and SUVs ready for your journey.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2070&auto=format&fit=crop" alt="Maruti Swift" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Maruti Suzuki Swift</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Hatchback</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Good mileage, excellent pickup, and comfortable interior. Perfect for city driving and short trips.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <div class="text-lg font-bold text-blue-600">Competitive Price</div>
+                            <a href="tel:09494673361" class="text-blue-600 hover:text-blue-800 font-medium">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOMPStBJacJni-BEfrVDDbtp1jXBcQeTlNKVi-EChQ7NNyT6wqjUsg-gAM&s=10" alt="Hyundai i20" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Hyundai i20</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Premium Hatch</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Highly rated by our customers for weekend getaways. Smooth driving experience guaranteed.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <div class="text-lg font-bold text-blue-600">Competitive Price</div>
+                            <a href="tel:09494673361" class="text-blue-600 hover:text-blue-800 font-medium">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 
+                 <!-- Car Card 3 (Placeholder for SUV) -->
+                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=2070&auto=format&fit=crop" alt="SUV" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">SUVs Available</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">SUV</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Need more space? Contact us for our range of well-maintained SUVs for longer outstation trips.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <div class="text-lg font-bold text-blue-600">Call for Rates</div>
+                            <a href="tel:09494673361" class="text-blue-600 hover:text-blue-800 font-medium">Inquire <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">What Our Customers Say</h2>
+                <div class="flex items-center justify-center mt-2">
+                    <span class="text-2xl font-bold mr-2">4.5</span>
+                    <div class="star-rating text-xl">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="text-gray-500 ml-2">(44 Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">P</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Praveen G</h4>
+                            <div class="star-rating text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Excellent service. I rented a i20 from the Munekolal, Bangalore spot on this December month for a 2-day trip. The pickup process was very smooth — only a 5–7 minute wait."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold mr-3">T</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Thanvitha</h4>
+                            <div class="star-rating text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Good response from owner and we had taken swift good experience undoubtedly you can take from these car rental very smooth response and when we are in the trip also they lifted calls immediately..."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold mr-3">S</div>
+                        <div>
+                            <h4 class="font-bold text-sm">sudhir pawar</h4>
+                            <div class="star-rating text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"I recently booked a self-drive car from here and got it at a very competitive price... And car mileage, pickup, good interior, worthy price."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Visit Us or Call</h2>
+                    <p class="text-gray-400 mb-8">We are conveniently located in Marathahalli and open 24 hours to serve your travel needs.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-blue-500 mt-1 mr-4 text-xl"></i>
+                            <span class="text-gray-300">Lakshmi Narayana temple road Near Lakshmi Narayana temple, Munnekolal, Marathahalli, Bengaluru, Karnataka 560037</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-blue-500 mr-4 text-xl"></i>
+                            <span class="text-gray-300 text-xl font-bold">094946 73361</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-clock text-blue-500 mr-4 text-xl"></i>
+                            <span class="text-gray-300">Open 24 hours</span>
+                        </li>
+                        <li class="flex items-center mt-4">
+                             <span class="bg-gray-800 text-xs px-3 py-1 rounded-full text-gray-300 border border-gray-700">LGBTQ+ friendly</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Map Placeholder -->
+                <div class="bg-gray-800 rounded-lg p-2 flex items-center justify-center min-h-[300px] border border-gray-700">
+                    <div class="text-center">
+                        <i class="fa-solid fa-map-location-dot text-6xl text-gray-600 mb-4"></i>
+                        <p class="text-gray-400">Google Maps Embed Goes Here</p>
+                        <p class="text-xs text-gray-500 mt-2">WPV5+G5 Bengaluru, Karnataka</p>
+                    </div>
+                    <!-- To make it real, replace this div with:
+                    <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="100%" style="border:0; border-radius: 0.5rem;" allowfullscreen="" loading="lazy"></iframe>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2026 VS Self Drive Cars, Bengaluru. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
